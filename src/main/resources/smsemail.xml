@@ -1,0 +1,201 @@
+
+======Email Notifications===========
+
+        Request
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+    <header>
+        <messageID>email-sms-1234</messageID>
+        <featureCode>661</featureCode>
+        <featureName>EnterpriseDispatcher</featureName>
+        <serviceCode>1021091</serviceCode>
+        <serviceName>EmailNotification</serviceName>
+        <serviceSubCategory>Notification</serviceSubCategory>
+        <minorServiceVersion>1.0</minorServiceVersion>
+        <channelCode>001</channelCode>
+        <channelName>t24</channelName>
+        <routeCode>210</routeCode>
+        <routeName>BPRSMSGW</routeName>
+        <processingcode></processingcode>
+        <timeStamp>22222</timeStamp>
+        <serviceMode>sync</serviceMode>
+        <subscribeEvents>1</subscribeEvents>
+        <callBackURL></callBackURL>
+    </header>
+    <requestPayload>
+        <primaryData>
+            <businessKey>sridhara.shastry@bringglobal.com</businessKey>
+            <businessKeyType>EMailID</businessKeyType>
+        </primaryData>
+        <subject>Test Message</subject>
+        <message>This is test message</message>
+    </requestPayload>
+</enterpriseDispatcher>
+
+        Success Response
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+<header>
+    <messageID>email-sms-1234</messageID>
+    <conversationID>50697c9c-e129-4071-b323-a6640296fee1</conversationID>
+    <targetSystemID>Not Available</targetSystemID>
+    <channelCode>001</channelCode>
+    <channelName>t24</channelName>
+    <routeCode>210</routeCode>
+    <routeName>BPRSMSGW</routeName>
+    <serviceCode>1011002</serviceCode>
+    <processingCode>1002</processingCode>
+    <statusCode>0</statusCode>
+    <statusDescription>Success</statusDescription>
+    <ehfInfo>
+        <item>
+            <ehfRef>OSP-1002</ehfRef>
+            <ehfDesc>Processed Successfully</ehfDesc>
+        </item>
+    </ehfInfo>
+</header>
+<responsePayload>
+    <primaryData>
+        <businessKey>sridhara.shastry@bringglobal.com</businessKey>
+        <businessKeyType>EMailID</businessKeyType>
+    </primaryData>
+    <subject>Test Message</subject>
+    <message>This is test message</message>
+</responsePayload>
+</enterpriseDispatcher>
+
+        Error Response
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+<header>
+    <messageID>email-sms-1234</messageID>
+    <conversationID>50697c9c-e129-4071-b323-a6640296fee1</conversationID>
+    <targetSystemID>Not Available</targetSystemID>
+    <channelCode>001</channelCode>
+    <channelName>t24</channelName>
+    <routeCode>210</routeCode>
+    <routeName>BPRSMSGW</routeName>
+    <serviceCode>1011002</serviceCode>
+    <processingCode>1002</processingCode>
+    <statusCode>06</statusCode>
+    <statusDescription>Error</statusDescription>
+    <ehfInfo>
+        <item>
+            <ehfRef>Dynamically Generated</ehfRef>
+            <ehfDesc>Dynamically Generated</ehfDesc>
+        </item>
+    </ehfInfo>
+</header>
+<responsePayload>
+    <primaryData>
+        <businessKey>sridhara.shastry@bringglobal.com</businessKey>
+        <businessKeyType>EMailID</businessKeyType>
+    </primaryData>
+    <subject>Test Message</subject>
+    <message>This is test message</message>
+</responsePayload>
+</enterpriseDispatcher>
+
+
+
+        =========SMS Notification=================
+
+        Request
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+<header>
+    <messageID>email-sms-1234</messageID>
+    <featureCode>661</featureCode>
+    <featureName>EnterpriseDispatcher</featureName>
+    <serviceCode>1021092</serviceCode>
+    <serviceName>SMS</serviceName>
+    <serviceSubCategory>Notification</serviceSubCategory>
+    <minorServiceVersion>1.0</minorServiceVersion>
+    <channelCode>001</channelCode>
+    <channelName>t24</channelName>
+    <routeCode>211</routeCode>
+    <routeName>XCHNGSVR</routeName>
+    <processingcode></processingcode>
+    <timeStamp>22222</timeStamp>
+    <serviceMode>sync</serviceMode>
+    <subscribeEvents>1</subscribeEvents>
+    <callBackURL></callBackURL>
+</header>
+<requestPayload>
+    <primaryData>
+        <businessKey>254792483394</businessKey>
+        <businessKeyType>MobileNo</businessKeyType>
+    </primaryData>
+    <subject>Test Message</subject>
+    <message>This is test message</message>
+</requestPayload>
+</enterpriseDispatcher>
+
+
+        Success Response
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+<header>
+    <messageID>email-sms-1234</messageID>
+    <conversationID>50697c9c-e129-4071-b323-a6640296fee1</conversationID>
+    <targetSystemID>Not Available</targetSystemID>
+    <channelCode>001</channelCode>
+    <channelName>t24</channelName>
+    <routeCode>211</routeCode>
+    <routeName>XCHNGSVR</routeName>
+    <serviceCode>1021092</serviceCode>
+    <processingCode>1002</processingCode>
+    <statusCode>0</statusCode>
+    <statusDescription>Success</statusDescription>
+    <ehfInfo>
+        <item>
+            <ehfRef>OSP-1002</ehfRef>
+            <ehfDesc>Processed Successfully</ehfDesc>
+        </item>
+    </ehfInfo>
+</header>
+<responsePayload>
+    <primaryData>
+        <businessKey>254792483394</businessKey>
+        <businessKeyType>MobileNo</businessKeyType>
+    </primaryData>
+    <subject>Test Message</subject>
+    <message>This is test message</message>
+</responsePayload>
+</enterpriseDispatcher>
+
+        Error Response
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+<enterpriseDispatcher>
+<header>
+    <messageID>email-sms-1234</messageID>
+    <conversationID>50697c9c-e129-4071-b323-a6640296fee1</conversationID>
+    <targetSystemID>Not Available</targetSystemID>
+    <channelCode>001</channelCode>
+    <channelName>t24</channelName>
+    <routeCode>211</routeCode>
+    <routeName>XCHNGSVR</routeName>
+    <serviceCode>1021092</serviceCode>
+    <processingCode>1002</processingCode>
+    <statusCode>06</statusCode>
+    <statusDescription>Error</statusDescription>
+    <ehfInfo>
+        <item>
+            <ehfRef>Dynamically Generated</ehfRef>
+            <ehfDesc>Dynamically Generated</ehfDesc>
+        </item>
+    </ehfInfo>
+</header>
+<responsePayload>
+    <primaryData>
+        <businessKey>254792483394</businessKey>
+        <businessKeyType>2547924833</businessKeyType>
+    </primaryData>
+    <subject>Test Message</subject>
+    <message>This is test message</message>
+</responsePayload>
+</enterpriseDispatcher>

@@ -1,0 +1,63 @@
+spring:
+  application:
+    name:  bpr-sms-email-notif
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/annalis
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-timeout: 60000
+      max-lifetime: 30000
+      connection-timeout: 60000
+      pool-name: HikariConectonPoolIPSLDatabase
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: false
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  activemq:
+    broker-url: amqp://localhost:5672
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+    pool:
+      enabled: true
+      max-connections: 10
+      idle-timeout: 60
+      max-sessions-per-connection: 500
+      block-if-full: false
+      time-between-expiration-check: 100
+  mail:
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+          auth: true
+    host: smtp.gmail.com
+    username: bonipo9839@migonom.com
+    password:
+
+notif:
+  amq-sms-queue-name: BPR.SMS.EMAIL.NOTIF
+  amq-email-queue-name: BPR.EMAIL.NOTIF
+  amq-receive-timeout: 30
+  api-password: admin
+  api-username: admin
+
+twilio:
+  account-sid: AC84b28cecd56650e3fe21e47e5e7ccc11
+  auth-token: d771b270434885589b8bb7130d482963
+  trial-number: +17246174739
